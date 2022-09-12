@@ -1,0 +1,13 @@
+header{
+    background-color: #5e2129;
+}
+
+img,body{
+    background-size: 100%;
+    background-image: url(../img/pexels-bruno-cantuária-774455.jpg);
+    max-width: 100%;
+    background-position: center;
+}
+body{
+    
+}
