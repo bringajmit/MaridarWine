@@ -1,4 +1,7 @@
+infrastructure\RepositorioUsuarioImpl.class
 domain\Usuario.class
 delivery\ControladorUsuarios.class
 domain\ServicioLoginImpl.class
+domain\RepositorioUsuario.class
 domain\ServicioLogin.class
+delivery\DatosRegistro.class

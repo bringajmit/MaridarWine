@@ -2,7 +2,12 @@ package domain;
 
 public class Usuario {
 
-    private final String usuario;
+    private String usuario;
+    private String clave;
+
+    public Usuario() {
+
+    }
 
     public Usuario(String usuario) {
         this.usuario=usuario;
@@ -12,4 +17,11 @@ public class Usuario {
         return usuario;
     }
 
+    public void setMail(String usuario) {
+        this.usuario=usuario;
+    }
+
+    public void setPassword(String clave) {
+        this.clave=clave;
+    }
 }

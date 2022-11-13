@@ -42,9 +42,16 @@ public class ControladorUsuarioTest {
         entoncesMeRedirigeAlIndex(vista, "registrarme");
     }
 
+    @Test
+    public void darErrorAlRegistrarmeSiLasClavesNoCoinciden(){
+
+        String vista = cuandoRegistroElUsuario("carloncho@gmail.com", "1234", "1235");
+
+        entoncesMeRedirigeAlIndex(vista, "index");
+    }
+
     private void dadoQueExisteUsuario(String usuario) {
-      //  when(servicioLogin.registar(usuario)).thenThrow(Exception.class);
-        doThrow(Exception.class).when(servicioLogin).registar(usuario);
+        doThrow(Exception.class).when(servicioLogin).registar(usuario, "");
     }
 
     private void entoncesMeRedirigeAlIndex(String vista, String vistaEsperada){
@@ -52,10 +59,18 @@ public class ControladorUsuarioTest {
     }
 
     private String cuandoRegistroElUsuario(String usuario) {
-        ModelAndView mav = controladorUsuarios.registrarUsuario(usuario);
+        ModelAndView mav = controladorUsuarios.registrarUsuario(conDatos(usuario, "",""));
         return mav.getViewName();
 
     }
 
+    private String cuandoRegistroElUsuario(String usuario, String clave, String repiteClave) {
+        ModelAndView mav = controladorUsuarios.registrarUsuario(conDatos(usuario, "",""));
+        return mav.getViewName();
+    }
 
+
+    private DatosRegistro conDatos(String usuario, String clave, String repiteClave){
+        return new DatosRegistro(usuario, clave, repiteClave);
+    }
 }

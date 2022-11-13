@@ -1,6 +1,7 @@
 package domain;
 
-public class ServicioLogin {
-    public void registar(String usuario) {
-    }
+public interface ServicioLogin {
+    void registar(String usuario, String clave);
+    void consultarUsuario(String mail, String password);
+
 }
