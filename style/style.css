@@ -9,7 +9,28 @@ header{
     background-color: #3f161ce0;
 }
 
-#galeria{
+section #galeria{
+    display: flex;
+    width: 500pxpx;
+    height: 530px;
+}
+
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover{
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* #galeria{
     padding: 2px;
     margin: 2px;
 }
@@ -17,7 +38,7 @@ header{
 #galeria img{
     max-width: 40%;
     margin-bottom: 1em;
-}
+}*/
 
 #cabecera img{
     max-width: 12%;
@@ -77,14 +98,21 @@ footer{
     #cabecera img{
         width: calc(50% - 1em);
     }
-    #galeria{
+
+    section #galeria{
+        display: flex;
+        width: 700px;
+        height: 530px;
+    }
+    /*#galeria{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+
     #galeria img{
         width: calc(38% - 1em);
-    }
+    }*/
     #imagenes-sommelier{
         display: flex;
         flex-wrap: wrap;
@@ -100,7 +128,21 @@ footer{
         width: calc(33% - 1em);
         padding: 1em;
     }
-    #galeria img{
+
+    section #galeria{
+        display: flex;
+        width: 1000px;
+        height: 530px;
+    }
+    
+    section img{
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition: .5s ease;
+    }
+    /*#galeria img{
         font-size: 40%;
         width: calc(23% - 1em);
     }
@@ -108,9 +150,9 @@ footer{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: center;
+       
         flex-direction: row
-    }
+    }*/
     h1{
         font-size: -webkit-xxx-large;
     }
