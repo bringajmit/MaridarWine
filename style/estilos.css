@@ -1,0 +1,173 @@
+html{
+    background-image: url(../img/fondo.jpeg);
+    background-size: 100%;
+}
+
+body{
+    max-width: 95%;
+    margin: auto;
+    padding: 1em;
+    
+}
+
+header{
+    background-color: #e6e1dfec;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    max-width: 77%;
+    border-radius: 50%;
+}
+
+div h1{
+    display: contents;
+}
+
+header div{
+    padding: 1em;
+    text-align: center;
+    max-width: 30%;
+}
+
+.acceso{
+    display: grid;
+}
+
+.acceso a{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#navegacion{
+    margin: 5px;
+    max-width: 100%;
+    padding: 1em;
+    text-align: center;
+    background-color: #998880b6;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+nav a{
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+    display: inline;
+}
+
+a:hover{
+    background-color: #fff;
+    color:#40b4e8; 
+    border-radius: 5px;
+}
+
+h2{
+    text-align: center;
+}
+
+.foto{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.foto img{
+    max-width: 40%;
+}
+
+.galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em;
+}
+
+.galeria img{
+    max-width: 30%;
+}
+
+.galeria img:hover{
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+    height: auto;
+}
+
+#nosotros div{
+    background-color:  #e6e1df66;
+    padding: 1em;
+    margin: 1em;
+}
+
+#contacto{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.redsocial img{
+    max-width: 20%;
+}
+
+footer{
+    padding: 1em;
+    margin: 1em;
+    background-color: #695c56b6;
+}
+
+@media screen and (min-width: 47em){
+
+    header{
+        background-color: #e6e1dfec;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 60em){
+
+    .galeria{
+        display: flex;
+        width: auto;
+        height: 350px;
+        background-color:  #695c56b6;
+        align-items: none;
+        margin: 0;
+    }    
+
+    .galeria img{
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition; 1s ease;
+        height: 70%;
+    }
+
+    .galeria img:hover{
+        height: auto;
+    }
+
+}
